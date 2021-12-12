@@ -23,14 +23,14 @@
 
 <body class="font-sans antialiased">
     <div class="w-screen h-screen text-white" style="background-color:#000039;">
-        <header class="px-5 lg:px-0 max-w-6xl py-8 mx-auto flex items-center justify-between">
+        <header style="height: 20vh;" class="px-5 lg:px-0 max-w-6xl mx-auto flex items-center justify-between">
             <a href="/"><img class="w-32" src="/img/logo.png" alt="KOLLECT"></a>
 
             <a href="https://www.instagram.com/we_kollect/" class="cursor-pointer">
                <img class="w-10" src="/img/instagram.png" alt="Instagram">
             </a>
         </header>
-        <div class="max-w-xl lg:px-0 px-6 text-center w-full mx-auto lg:mt-10 mt-16 flex flex-col items-center">
+        <div style="height: 80vh;" class="max-w-xl lg:px-0 px-6 text-center w-full mx-auto  flex flex-col items-center justify-center">
             <h1 class="text-3xl lg:text-5xl leading-tight">Buy & Sell Cryptocurrency coins at a good rate.</h1>
             <p class="lg:text-lg text-sm leading-normal mt-3">On Kollect, you can sell or buy any cryptocurrency coin at a good rate
                 and get paid instantly. Our web app is currently under construction, you can get in touch with us on
