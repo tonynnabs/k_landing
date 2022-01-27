@@ -82,3 +82,35 @@ p{
     font-style: normal;
     font-weight: 1000;
 }
+
+.ticker__list {
+    animation: ticker 15s infinite linear;
+}
+
+.ticker:hover .ticker__list {
+    animation-play-state: paused;
+}
+
+@-moz-keyframes ticker {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes ticker {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@-o-keyframes ticker {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes ticker {
+    100% {
+        transform: translateX(-100%);
+    }
+}

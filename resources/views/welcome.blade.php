@@ -1,38 +1,17 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Fonts -->
-    {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"> --}}
-
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <link rel="stylesheet" href="/css/custom.css">
-
-
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
-</head>
-
-<body class="font-sans antialiased">
+<x-guest>
     <div class="w-screen h-screen text-white" style="background-color:#000039;">
-        <header style="height: 20vh;" class="px-5 lg:px-0 max-w-6xl mx-auto flex items-center justify-between">
+        <header style="height: 10vh;" class="px-5 lg:px-0 max-w-6xl mx-auto flex items-center justify-between">
             <a href="/"><img class="w-32" src="/img/logo.png" alt="KOLLECT"></a>
 
             <a href="https://www.instagram.com/we_kollect/" class="cursor-pointer">
-               <img class="w-10" src="/img/instagram.png" alt="Instagram">
+                <img class="w-10" src="/img/instagram.png" alt="Instagram">
             </a>
         </header>
-        <div style="height: 80vh;" class="max-w-xl lg:px-0 px-6 text-center w-full mx-auto  flex flex-col items-center justify-center">
+        <div style="height: 90vh;"
+            class="max-w-xl lg:px-0 px-6 text-center w-full mx-auto  flex flex-col items-center justify-center">
             <h1 class="text-3xl lg:text-5xl leading-tight">Buy & Sell Cryptocurrency coins at a good rate.</h1>
-            <p class="lg:text-lg text-sm leading-normal mt-3">On Kollect, you can sell or buy any cryptocurrency coin at a good rate
+            <p class="lg:text-lg text-sm leading-normal mt-3">On Kollect, you can sell or buy any cryptocurrency coin at
+                a good rate
                 and get paid instantly. Our web app is currently under construction, you can get in touch with us on
                 Whatsapp or Instagram.</p>
             <a href="tel:07049149371"
@@ -44,8 +23,39 @@
                 </svg>Get in touch
             </a>
         </div>
+
+        <section class="fixed bg-slate-900 w-full flex items-center bottom-0 left-0 right-0 p-3 ticker">
+            <ul class="flex space-x-3 items-center ticker__list ml-3">
+                @foreach ($coins as $coin)
+                <li class="flex items-center justify-between p-2 rounded bg-slate-700 w-[200px]">
+                    <div class="flex items-center w-1/2">
+                        <img class="w-7 h-7 mr-2" src="{{$coin['logo']}}"
+                            alt="btc">
+                        <div>
+                            <h2 class="text-sm">{{$coin['symbol']}}</h2>
+                            <h3 class="text-base font-light">{{$coin['name']}}</h3>
+                        </div>
+                    </div>
+
+                    @if ($coin['deleted_at'])
+                    <h2 class="ml-3 text-3xl w-1/2 flex justify-end text-slate-500">NILL<span class="text-sm text-gray-300">/$</span></h2>
+                    @else
+                    <h2 class="ml-3 text-3xl w-1/2 flex justify-end">{{$coin['buy_rate']}}<span class="text-sm text-gray-300">/$</span></h2>
+                    @endif
+                </li>
+                @endforeach
+
+            </ul>
+        </section>
+
+        @section('scripts')
+        <script>
+            let ticker = document.querySelector('.ticker')
+            let list = document.querySelector('.ticker__list')
+            let clone = list.cloneNode(true)
+
+            ticker.append(clone)
+        </script>
+        @endsection
     </div>
-
-</body>
-
-</html>
+</x-guest>

@@ -11,8 +11,12 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
-    return view('welcome');
+    $coins = Http::withHeaders(['Authorization' => 'Bearer 1|8fNooKF0MMdXVgnXxMGLXg07JFjj3kK6tUD22stD'])
+            ->get('https://app.wekollect.co/api/coins')->json();
+    // dd($coins);
+
+    return view('welcome')->with('coins', collect($coins['data'])->take(6));
 });
