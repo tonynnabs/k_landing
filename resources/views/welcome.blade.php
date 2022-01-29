@@ -1,11 +1,17 @@
 <x-guest>
     <div class="w-screen h-screen text-white" style="background-color:#000039;">
-        <header style="height: 10vh;" class="px-5 lg:px-0 max-w-6xl mx-auto flex items-center justify-between">
+        <header style="height: 10vh;" class="px-5 lg:px-0 pt-4 max-w-6xl mx-auto flex items-center justify-between">
             <a href="/"><img class="w-32" src="/img/logo.png" alt="KOLLECT"></a>
 
-            <a href="https://www.instagram.com/we_kollect/" class="cursor-pointer">
-                <img class="w-10" src="/img/instagram.png" alt="Instagram">
-            </a>
+            <div class="flex items-center">
+                <a href="https://www.instagram.com/we_kollect/" class="cursor-pointer">
+                    <img class="lg:w-10 w-5" src="/img/instagram.png" alt="Instagram">
+
+                </a>
+                <a href="https://app.wekollect.co">
+                    <button class="ml-5 px-4 py-2 rounded bg-slate-700">Account</button>
+                </a>
+            </div>
         </header>
         <div style="height: 90vh;"
             class="max-w-xl lg:px-0 px-6 text-center w-full mx-auto  flex flex-col items-center justify-center">
