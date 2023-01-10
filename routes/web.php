@@ -20,3 +20,7 @@ Route::get('/', function () {
     return view('welcome')->with('coins', collect($coins['data'])->take(6));
     // return view('welcome');
 });
+
+Route::get('/privacy-policy', function() {
+    return view('privacy-policy');
+});

@@ -1,0 +1,11 @@
+
+.xl-list > li {
+    list-style: inside;
+}
+
+.xl-h2 {
+    font-weight: 800;
+    font-size: 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
