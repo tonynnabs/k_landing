@@ -566,6 +566,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-40 {
   width: 10rem;
 }
+.w-20 {
+  width: 5rem;
+}
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -1038,6 +1041,10 @@ html,body {
 
   .sm\:w-32 {
     width: 8rem;
+  }
+
+  .sm\:w-40 {
+    width: 10rem;
   }
 }
 
