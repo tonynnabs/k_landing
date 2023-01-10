@@ -13,18 +13,12 @@
                 <i class="fa-solid text-2xl fa-xmark"></i>
             </div>
             <h1 class="px-5 font-bold text-gray-500 uppercase text-sm tracking-widest">Menu</h1>
-            <ul class="px-5 mt-3">
+            <ul class="px-5 mt-3 mb-3">
                 <x-mobile-nav-item href="/" title="Home" />
                 <x-mobile-nav-item href="#how_it_works" title="How it works" />
                 <x-mobile-nav-item href="#support" title="Contact Support" />
             </ul>
-            <div class="bg-blue-50 rounded-lg mt-8 p-4 mx-2 flex items-center justify-center">
-                <a href="https://app.wekollect.co">
-                    <button class="bg-secondary text-white px-8 py-4 rounded-lg">Account
-                        <i class="fa-solid fa-chevron-right ml-2"></i>
-                    </button>
-                </a>
-            </div>
+
         </nav>
     </div>
 </div>

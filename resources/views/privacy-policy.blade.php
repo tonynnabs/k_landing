@@ -24,7 +24,7 @@
             </header>
         </div>
     </div>
-    <div class="mt-12 max-w-7xl mx-auto">
+    <div class="mt-12 max-w-7xl mx-auto px-5">
         <h1 class="text-center text-4xl font-bold mb-12">Privacy Policy</h1>
         <p class=MsoNormal style='text-align:justify'><span
                 style='font-size:12.0pt;
