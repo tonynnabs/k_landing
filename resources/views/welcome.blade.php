@@ -32,18 +32,15 @@
                 <div class="w-full lg:w-1/2">
                     <h1 class="text-6xl lg:text-8xl mix-blend-overlay font-bold tracking-tighter mix-blend-differences">
                         Buy and sell your Crypto Currencies</h1>
-                    <p class="text-lg mt-5 text-gray-500">Your 24/7 online reliable crypto trading service. Our major
-                        aim is to help make Crypto trading easy for everyone with the aid of our swift payment and
-                        settlement plans. We buy and sell <span style="font-family: 'M PLUS 1 Code', sans-serif;"
-                            class="text-secondary font-bold">#anycoin</span> at amazing rates</p>
+                    <p class="text-lg mt-5 text-gray-500">Your 24/7 Crypto p2p trading service. Hassle free Crypto p2p experience is our aim. Don&#8242;t settle for less, trade with Kollect. </p>
                     <div class="mt-4 flex items-center">
-                        <x-google-play />
+                        <x-download-button />
 
-                        <a href="https://wa.link/2v2a6a">
+                        {{-- <a href="https://wa.link/2v2a6a">
                             <button class="bg-transparent text-black font-bold rounded-lg py-3 px-5">Make Inquiry
                                 <i class="fa-solid fa-chevron-right ml-2"></i>
                             </button>
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 ml-0 mt-8 lg:mt-0 lg:ml-12 relative">
@@ -60,7 +57,7 @@
             </div>
         </div>
     </section>
-    <section id="how_it_works" class=" bg-blue-50">
+    {{-- <section id="how_it_works" class=" bg-blue-50">
         <div class="p-8 max-w-7xl mx-auto py-24  text-white ">
             <div class="flex items-center mb-8">
                 <h1 class="flex-none font-bold text-4xl lg:text-5xl text-black ">How it works</h1>
@@ -125,7 +122,7 @@
                 confirmed transaction means that the transaction has been included in a block, and therefore included in
                 the blockchain. That means the transaction has now been officially recorded and verified. This is all
                 monitored by the Kollect system and updated automatically</p>
-            <x-google-play />
+
         </div>
     </section>
     <section class=" bg-blue-50 ">
@@ -137,7 +134,7 @@
                     address of
                     your choosen within 3 business days. You are limited to a certain amount of spin in a day and can
                     request to get more spins. </p>
-                <x-google-play />
+
             </div>
             <div class="w-full lg:w-1/2 mt-12 lg:mt-0">
                 <div class="p-3 mx-auto overflow-hidden rounded-3xl phone-figure" style="width:264px; height:533px;">
@@ -147,7 +144,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section id="support"
         class="flex flex-col lg:flex-row  max-w-3xl mx-auto p-8 items-start  lg:items-center justify-center my-8">
         <div>
