@@ -24,3 +24,6 @@ Route::get('/', function () {
 Route::get('/privacy-policy', function() {
     return view('privacy-policy');
 });
+Route::get('/terms-and-conditions', function() {
+    return view('terms');
+});

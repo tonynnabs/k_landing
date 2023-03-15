@@ -163,7 +163,7 @@
     <footer class="flex flex-col items-center justify-center text-gray-400">
         <ul class="flex mb-3">
             <li class="text-sm pr-3 text-blue-600 cursor-pointer"><a href="/privacy-policy/">Privacy Policy</a></li>
-            <li class="text-sm text-blue-600 cursor-pointer">Terms of Service</li>
+            <li class="text-sm text-blue-600 cursor-pointer"><a href="/terms-and-conditions/">Terms of Service</a></li>
         </ul>
         © 2022 Kollect Global Tech.
     </footer>
