@@ -9,8 +9,8 @@
             <canvas id="gradient-canvas">
             </canvas>
         </div> --}}
-        <div class="max-w-7xl px-8 mx-auto relative">
-            <header style="height: 10vh;" class="bg-transparent lg:px-0 py-4 flex items-center justify-between">
+        <div class="max-w-7xl px-8 mx-auto fixed w-full z-50 transition-all" id="main-menu">
+            <header style="height: 10vh; " class=" lg:px-0 py-4 flex items-center justify-between">
                 <a href="/"><img class="w-32" src="/img/logo.svg" alt="KOLLECT"></a>
                 <nav class="hidden lg:block">
                     <ul class="flex items-center space-x-8 text-white">
@@ -21,7 +21,7 @@
                 </nav>
                 <div class=" items-center hidden lg:flex">
                     <a href="https://www.instagram.com/we_kollect/" target="_blank" class="cursor-pointer">
-                        <i class="fa-brands fa-instagram text-2xl"></i>
+                        <i class="fa-brands fa-instagram text-2xl" id="nav-social-icon"></i>
                     </a>
                 </div>
                 <x-mobile-nav />
@@ -32,7 +32,8 @@
                 <div class="w-full lg:w-1/2">
                     <h1 class="text-6xl lg:text-8xl mix-blend-overlay font-bold tracking-tighter mix-blend-differences">
                         Buy and sell your Crypto Currencies</h1>
-                    <p class="text-lg mt-5 text-gray-500">Your 24/7 Crypto p2p trading service. Hassle free Crypto p2p experience is our aim. Don&#8242;t settle for less, trade with Kollect. </p>
+                    <p class="text-lg mt-5 text-gray-500">Your 24/7 Crypto p2p trading service. Hassle free Crypto p2p
+                        experience is our aim. Don&#8242;t settle for less, trade with Kollect. </p>
                     <div class="mt-4 flex items-center">
                         <x-download-button />
 
@@ -170,4 +171,32 @@
     <section class="fixed bg-slate-900 text-white w-full flex items-center bottom-0 left-0 right-0 p-3 ticker">
         <x-ticker :coins="$coins" />
     </section>
+
+    @section('scripts')
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const navbar = document.getElementById('main-menu');
+                const navIcon = document.getElementById('nav-social-icon');
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('bg-blue-700');
+                        navIcon.classList.add('text-white');
+                    } else {
+                        navbar.classList.remove('bg-blue-700');
+                        navIcon.classList.remove('text-white');
+                    }
+                });
+            }, false);
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let ticker = document.querySelector('.ticker')
+                let list = document.querySelector('.ticker__list')
+                let clone = list.cloneNode(true)
+
+                ticker.append(clone)
+            }, false);
+        </script>
+    @endsection
 </x-guest>
